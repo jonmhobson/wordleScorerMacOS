@@ -14,7 +14,7 @@ do {
     let bundleURL = URL(fileURLWithPath: "Files.bundle", relativeTo: currentDirectoryURL)
     let bundle = Bundle(url: bundleURL)
     let answersPath = bundle!.url(forResource: answers, withExtension: "txt")!
-    let allowedPath = bundle!.url(forResource: answers, withExtension: "txt")!
+    let allowedPath = bundle!.url(forResource: allowed, withExtension: "txt")!
     let answers = try String(contentsOfFile: answersPath.path, encoding: .utf8)
     let allowed = try String(contentsOfFile: allowedPath.path, encoding: .utf8)
     let words: [String] =
